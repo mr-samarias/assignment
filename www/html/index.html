@@ -1,113 +1,52 @@
+<!DOCTYPE html>
+<html>
 <head>
-  <title>Videos</title>
-  
-    <style>
-        h1{
-              text-align: center;
-              color: ivory;
-              margin-top: 0.67em;
-              margin-bottom:1em;
-              
-            }
-        body{
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login</title>
+
+<style>
+ body{
             margin:auto;
             position:unset;
             padding:10px;
             background-image: url("pics/back.jfif");
             background-repeat: no-repeat;
-            background-size:100% 100%;
+            background-size:100% 204.3%;
             font-size:14px;
             font-family:Verdana;
-    
             font-size: 15px;
             font-family: Verdana;
-            
-        }
-        video{
-          width: 320px;
-          height: 240px;
-          flex-flow:column;
-          margin-left:1.1em;
-          margin-top:2em;
-        }
-        .title-label {
-          position: fixed;
-          position: absolute;
-          z-index: 9;
-          color: rgb(255, 255, 255);
-          margin-top: 270px;
-          margin-left: 40px;
-
-          
-        }
-        .logo { position:relative; 
-          height:50px;
-          width:50px;
-          overflow:hidden;
-        }
-        .logo:after{
-          content:url(logo.jpg);
-          position:absolute;
-          top:0;
-          left:0;
-        }
-        img{
-            margin-left: auto;
+ }
+ img{
+            margin-top: 10%;
             margin-right: auto;
             display: block;
-            width: 300px;
+            width: 450px;
+
         }
-        .button1 {
-        background-color: #04AA6D;
-        color: white;
-        padding: 9px 20px;
-        border: none;
-        width: 100%;
-        position: absolute;
-        top: 15px;
-        left: 50px;
-        border-radius: 50px;
-        font-weight: bold;
-        font-style: oblique;
-        font-family:cursive ;
-        font-size: 15px;
-      
- 
-}
-.button2 {
-        background-color: #ff00bf;
-        color: white;
-        padding: 9px 20px;
-        border: none;
-        width: 100%;
-        position: absolute;
-        top: 15px;
-        left: 150px;
-        border-radius: 50px;
-        text-align: center;
-        font-weight: bold;
-        font-style: oblique;
-        font-family:cursive ;
-        font-size: 15px;
 
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
-.button3 {
-        background-color: #5900ff;
-        color: white;
-        padding: 9px 20px;
-        border: none;
-        width: 100%;
-        position: absolute;
-        top: 15px;
-        left: 247px;
-        border-radius: 50px;
-        text-align: center;
-        font-weight: bold;
-        font-style: oblique;
-        font-family:cursive ;
-        font-size: 15px;
 
-      
+/* Set a style for all buttons */
+button {
+    background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 20px;
  
 }
 
@@ -115,63 +54,155 @@ button:hover {
   opacity: 0.8;
   color: #000;
   border-radius: 80px;
-  background-color: #09ff00;
-  font-family:serif;
-  font-weight: bold;
-  font-size: 15px;
-  font-style: normal;
+  background-color: #f44336;
 }
-                
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 20%;
+  border-radius: 50%;
+  margin: 10px 40%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2></h2>
+<div id="header"><img src="pics/logo.jpg" alt=""></div>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="index.html" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="pics/img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
         
-    </style>
-    
+      <button type="button" onclick="window.location.href = 'about.html'">Login</button>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
    
-  </head>
 
-  <body>
-    <h1 class="h1" ></h1>
-    <button class="button1" onclick="window.location.href = 'login.html'" style="width:auto;">Logout</button>
-    <button class="button2" onclick="window.location.href = 'about.html'" style="width:auto;">About</button>
-    <button class="button3" onclick="window.location.href = 'reco.html'" style="width:auto;">Recomendation</button>
-    <div id="container">
-    <div id="header"><img src="pics/logo.jpg" alt=""></div>
-
-    <div >
-      <label class="title-label"><b>THE GHOST - Short Film (2021)</b> </label>
-      <video controls  poster='pics/pic1.png'>
-        <source src="mp4/video1.mp4" type='video/mp4'>
-              </video>
-              <label class="title-label"  ><b>Magic Show from Pixar 2019</b></label>     
-      <video  controls poster='pics/pic2.png'>
-        <source src="mp4/video2.mp4" type='video/mp4'>
-              </video>
-      <label class="title-label"><b>SILENCE | A cinematic shortfilm |</b> </label>
-      <video controls  poster='pics/pic3.png'>
-         <source src="mp4/video3.mp4" type='video/mp4'>
-               </video>
-               <label class="title-label"><b>EXIGENCY - Short Film (2021)</b></label>
-      <video controls  poster='pics/pic4.jfif'>
-        <source src="mp4/video4.mp4" type='video/mp4'>
-            </video>
-            <p></p>
-            <label class="title-label"><b>Last Shot, by Aemilia Widodo</b></label>
-      <video controls  poster='pics/pic5.jfif'>
-        <source src="mp4/video5.mp4" type='video/mp4'>
-              </video> 
-              <label class="title-label"><b>Robinson Crusoe Story | Cartoon</b> </label>    
-      <video  controls poster='pics/pic6.jfif'>
-        <source src="mp4/video6.mp4" type='video/mp4'>
-              </video>
-              <label class="title-label"><b>Mr Indifferent-Animated Short Film </b></label>
-      <video controls  poster='pics/pic7.jfif'>
-          <source src="mp4/video7.mp4" type='video/mp4'>
-                </video>
-                <label class="title-label"><b>2020 Best Stone Age - Animation</b></label>
-      <video controls  poster='pics/pic8.jfif'>
-      <source src="mp4/video8.mp4" type='video/mp4'>
-            </video>
-
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
-    </div>
-  </body>
-  </html>
+  </form>
+</div>
+
+
+<script>
+
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
