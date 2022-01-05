@@ -1,0 +1,177 @@
+<head>
+  <title>Videos</title>
+  
+    <style>
+        h1{
+              text-align: center;
+              color: ivory;
+              margin-top: 0.67em;
+              margin-bottom:1em;
+              
+            }
+        body{
+            margin:auto;
+            position:unset;
+            padding:10px;
+            background-image: url("pics/back.jfif");
+            background-repeat: no-repeat;
+            background-size:100% 100%;
+            font-size:14px;
+            font-family:Verdana;
+    
+            font-size: 15px;
+            font-family: Verdana;
+            
+        }
+        video{
+          width: 320px;
+          height: 240px;
+          flex-flow:column;
+          margin-left:1.1em;
+          margin-top:2em;
+        }
+        .title-label {
+          position: fixed;
+          position: absolute;
+          z-index: 9;
+          color: rgb(255, 255, 255);
+          margin-top: 270px;
+          margin-left: 40px;
+
+          
+        }
+        .logo { position:relative; 
+          height:50px;
+          width:50px;
+          overflow:hidden;
+        }
+        .logo:after{
+          content:url(logo.jpg);
+          position:absolute;
+          top:0;
+          left:0;
+        }
+        img{
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            width: 300px;
+        }
+        .button1 {
+        background-color: #04AA6D;
+        color: white;
+        padding: 9px 20px;
+        border: none;
+        width: 100%;
+        position: absolute;
+        top: 15px;
+        left: 50px;
+        border-radius: 50px;
+        font-weight: bold;
+        font-style: oblique;
+        font-family:cursive ;
+        font-size: 15px;
+      
+ 
+}
+.button2 {
+        background-color: #ff00bf;
+        color: white;
+        padding: 9px 20px;
+        border: none;
+        width: 100%;
+        position: absolute;
+        top: 15px;
+        left: 150px;
+        border-radius: 50px;
+        text-align: center;
+        font-weight: bold;
+        font-style: oblique;
+        font-family:cursive ;
+        font-size: 15px;
+
+}
+.button3 {
+        background-color: #5900ff;
+        color: white;
+        padding: 9px 20px;
+        border: none;
+        width: 100%;
+        position: absolute;
+        top: 15px;
+        left: 247px;
+        border-radius: 50px;
+        text-align: center;
+        font-weight: bold;
+        font-style: oblique;
+        font-family:cursive ;
+        font-size: 15px;
+
+      
+ 
+}
+
+button:hover {
+  opacity: 0.8;
+  color: #000;
+  border-radius: 80px;
+  background-color: #09ff00;
+  font-family:serif;
+  font-weight: bold;
+  font-size: 15px;
+  font-style: normal;
+}
+                
+        
+    </style>
+    
+   
+  </head>
+
+  <body>
+    <h1 class="h1" ></h1>
+    <button class="button1" onclick="window.location.href = 'login.html'" style="width:auto;">Logout</button>
+    <button class="button2" onclick="window.location.href = 'about.html'" style="width:auto;">About</button>
+    <button class="button3" onclick="window.location.href = 'reco.html'" style="width:auto;">Recomendation</button>
+    <div id="container">
+    <div id="header"><img src="pics/logo.jpg" alt=""></div>
+
+    <div >
+      <label class="title-label"><b>THE GHOST - Short Film (2021)</b> </label>
+      <video controls  poster='pics/pic1.png'>
+        <source src="mp4/video1.mp4" type='video/mp4'>
+              </video>
+              <label class="title-label"  ><b>Magic Show from Pixar 2019</b></label>     
+      <video  controls poster='pics/pic2.png'>
+        <source src="mp4/video2.mp4" type='video/mp4'>
+              </video>
+      <label class="title-label"><b>SILENCE | A cinematic shortfilm |</b> </label>
+      <video controls  poster='pics/pic3.png'>
+         <source src="mp4/video3.mp4" type='video/mp4'>
+               </video>
+               <label class="title-label"><b>EXIGENCY - Short Film (2021)</b></label>
+      <video controls  poster='pics/pic4.jfif'>
+        <source src="mp4/video4.mp4" type='video/mp4'>
+            </video>
+            <p></p>
+            <label class="title-label"><b>Last Shot, by Aemilia Widodo</b></label>
+      <video controls  poster='pics/pic5.jfif'>
+        <source src="mp4/video5.mp4" type='video/mp4'>
+              </video> 
+              <label class="title-label"><b>Robinson Crusoe Story | Cartoon</b> </label>    
+      <video  controls poster='pics/pic6.jfif'>
+        <source src="mp4/video6.mp4" type='video/mp4'>
+              </video>
+              <label class="title-label"><b>Mr Indifferent-Animated Short Film </b></label>
+      <video controls  poster='pics/pic7.jfif'>
+          <source src="mp4/video7.mp4" type='video/mp4'>
+                </video>
+                <label class="title-label"><b>2020 Best Stone Age - Animation</b></label>
+      <video controls  poster='pics/pic8.jfif'>
+      <source src="mp4/video8.mp4" type='video/mp4'>
+            </video>
+
+    </div>
+    </div>
+  </body>
+  </html>
